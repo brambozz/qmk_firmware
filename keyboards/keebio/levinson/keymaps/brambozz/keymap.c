@@ -22,17 +22,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------------------------------------------------------------------------'
  */
 [COLEMAK] = LAYOUT_ortho_4x12( \
-  KC_TAB,          KC_Q,    KC_W,    KC_F,    KC_P,      KC_G,             KC_J,    KC_L,      KC_U,    KC_Y,    KC_SCLN, RESET, \
-  RGUI_T(KC_BSPC), KC_A,    KC_R,    KC_S,    KC_T,      KC_D,             KC_H,    KC_N,      KC_E,    KC_I,    KC_O,    KC_QUOT, \
-  LSFT_T(KC_ESC),  KC_Z,    KC_X,    KC_C,    KC_V,      KC_B,             KC_K,    KC_M,      KC_COMM, KC_DOT,  KC_SLSH, RSFT_T(KC_ENT), \
-  MO(ADJUST),      KC_LCTL, KC_LGUI, KC_LALT, MO(RAISE), LT(LOWER,KC_SPC), KC_SPC,  MO(RAISE), KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
+  KC_TAB,          KC_Q,    KC_W,    KC_F,    KC_P,      KC_G,   KC_J,      KC_L,   KC_U,    KC_Y,    KC_SCLN, RESET, \
+  RGUI_T(KC_BSPC), KC_A,    KC_R,    KC_S,    KC_T,      KC_D,   KC_H,      KC_N,   KC_E,    KC_I,    KC_O,    KC_QUOT, \
+  LSFT_T(KC_ESC),  KC_Z,    KC_X,    KC_C,    KC_V,      KC_B,   KC_K,      KC_M,   KC_COMM, KC_DOT,  KC_SLSH, RSFT_T(KC_ENT), \
+  MO(ADJUST),      KC_LCTL, KC_LGUI, KC_LALT, MO(LOWER), KC_SPC, MO(RAISE), KC_SPC, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
 ),
 
 /* Lower/raise
  * ,------------------------------------------------------------------------------------.
- * | F1/F7 | F2/F8| F3/F9|F4/F10|F5/F11|F6/F12|      |  5/% |  6/^ |  7/& |  8/ *|      |
+ * | F1/F7 | F2/F8| F3/F9|F4/F10|F5/F11|F6/F12|      |  9/( |  0/) |  [/{ |  ]/} |      |
  * |-------+------+------+------+------+-------------+------+------+------+------+------|
- * |Del/Del|  `\~ |  \/| |  =/+ |  -/_ |      |      |  9/( |  0/) |  [/{ |  ]/} |      |
+ * |Del/Del|  `\~ |  \/| |  =/+ |  -/_ |      |      |  5/% |  6/^ |  7/& |  8/ *|      |
  * |-------+------+------+------+------+------|------+------+------+------+------+------|
  * |BLSTEP |      |      |      |      |      |      |  1/! |  2/@ |  3/# |  4/$ |      |
  * |-------+------+------+------+------+------+------+------+------+------+------+------|
@@ -41,15 +41,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 [LOWER] = LAYOUT_ortho_4x12( \
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   _______, KC_5,    KC_6,     KC_7,    KC_8,    _______, \
-  KC_DEL,  KC_GRV,  KC_BSLS, KC_EQL,  KC_MINS, _______, _______, KC_9,    KC_0,     KC_LBRC, KC_RBRC, _______, \
+  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   _______, KC_9,    KC_0,     KC_LBRC, KC_RBRC, _______, \
+  KC_DEL,  KC_GRV,  KC_BSLS, KC_EQL,  KC_MINS, _______, _______, KC_5,    KC_6,     KC_7,    KC_8,    _______, \
   BL_STEP, _______, _______, _______, _______, _______, _______, KC_1,    KC_2,     KC_3,    KC_4,    _______, \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______ \
 ),
 
 [RAISE] = LAYOUT_ortho_4x12( \
-  KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, KC_PERC,  KC_CIRC, KC_AMPR, KC_ASTR, _______, \
-  KC_DEL,  KC_TILD, KC_PIPE, KC_PLUS, KC_UNDS, _______, _______, KC_LPRN,  KC_RPRN, KC_LCBR, KC_RCBR, _______, \
+  KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, KC_LPRN,  KC_RPRN, KC_LCBR, KC_RCBR, _______, \
+  KC_DEL,  KC_TILD, KC_PIPE, KC_PLUS, KC_UNDS, _______, _______, KC_PERC,  KC_CIRC, KC_AMPR, KC_ASTR, _______, \
   _______, _______, _______, _______, _______, _______, _______, KC_EXLM,  KC_AT,   KC_HASH, KC_DLR,  _______, \
   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______ \
 ),
